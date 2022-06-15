@@ -1,0 +1,145 @@
+@mixin cardsFlexR {
+  display: flex;
+  flex-flow:column nowrap;
+  @media screen and (max-width:700px) {
+    &__hed {
+      flex:0 0 auto;
+    }
+  }
+  @media screen and (min-width:700px) {
+    flex-flow:row wrap;
+    justify-content: space-between;
+    &__hed {
+      flex:0 1 100%;
+    }  
+  }
+}
+@mixin cardsFlexC {
+  display: flex;
+  flex-flow:column nowrap;
+  @media screen and (max-width:700px) {
+    &__hed {
+      flex:0 0 auto;
+    }
+  }
+}
+@mixin cardsGrid {
+  @media screen and (min-width:700px) {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+@mixin cards01 {
+  @include cardsFlexR;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {
+    &__item {
+      flex:0 0 31.5%;
+    }
+  }
+}
+@mixin cards02 {
+  @include cardsFlexR;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {
+    &__hed {
+    }
+    &__item {
+      flex:0 0 31.5%;
+    }  
+  }
+}
+@mixin cards03 {
+  @include cardsFlexR;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {
+    &__item {
+      flex:0 0 31.5%;
+    }  
+  }
+}
+@mixin cards04 {
+  @include cardsFlexR;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {
+    &__item {
+      flex:0 0 31.5%;
+    }  
+  }
+}
+@mixin cards05 {
+  @include cardsFlexR;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {
+    &__item {
+      flex:1 0 33%;
+    }  
+  }
+}
+@mixin cards06 {
+  @include cardsFlexR;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {
+    &__item {
+      flex:1 0 50%;
+      &:first-of-type {
+        flex:0 0 100%;
+      }
+    }  
+  }
+}
+@mixin cards07 {
+  @include cardsFlexC;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {}
+}
+@mixin cards08 {
+  @include cardsFlexC;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {}
+}
+
+@mixin cards09 {
+  @include cardsGrid;
+  @media screen and (min-width:700px) {
+    -ms-grid-rows: auto 1fr 1fr;
+    -ms-grid-columns:1fr 1fr 1fr; 
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+    &__hed {
+      -ms-grid-row:1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+      grid-row:1 / span 1;
+      grid-column: 1 / span 3;
+    }
+    &__item {
+      grid-row:auto;
+      grid-column: auto;
+      &:first-of-type {
+        -ms-grid-row:2;
+        -ms-grid-row-span: 2;
+        -ms-grid-column:1;
+        -ms-grid-column-span: 2;
+        grid-row-start:2;
+        grid-row-end: span 2;
+        grid-column: 1 / span 2;
+      }
+      &:nth-of-type(2) {
+        -ms-grid-row:2;
+        -ms-grid-row-span: 1;
+        -ms-grid-column:3;
+        -ms-grid-column-span: 1;
+         grid-row:2 / span 1;
+      }
+      &:nth-of-type(3) {
+        -ms-grid-row:3;
+        -ms-grid-row-span: 1;
+        -ms-grid-column:3;
+        -ms-grid-column-span: 1;
+        grid-row:3 / span 1;
+      }
+    }
+  }
+}

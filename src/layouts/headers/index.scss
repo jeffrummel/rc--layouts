@@ -1,0 +1,242 @@
+@mixin baseHed {
+  box-sizing:border-box;
+  display: flex;
+  &__logo {
+    z-index: 1;
+    &--title {
+      @extend %clipIt;
+    }
+    &--grfx {
+    }
+  }
+  &__menu {
+    display: flex;
+    &--text {
+      @extend %clipIt;
+    }
+  }
+  &__nav {
+  }
+  @media screen and (max-width:700px) {
+    height:$logoMHeight;
+  }
+  @media screen and (min-width:700px) and (max-width:960px) {
+    height:$logoTHeight;
+  }
+  @media screen and (min-width:960px) and (max-width:1100px) {
+    height:$logoNHeight;
+  }
+  @media screen and (min-width:1100px) {
+      height:$logoDHeight;
+  }
+}
+@mixin logoLeft {
+  @include baseHed;
+  flex-flow:row wrap;
+  align-items: stretch;
+}
+@mixin logoCenter {
+  @include baseHed;
+  flex-flow:row wrap;
+  justify-content:space-between;
+  align-items: stretch;
+}
+@mixin logoRight {
+  @include baseHed;
+  flex-flow:row-reverse wrap;
+  justify-content:space-between;
+  align-items: stretch;
+}
+@mixin logoCol {
+  @include baseHed;
+  @media screen and (max-width:700px) {
+    flex-flow: row wrap;
+  }
+  @media screen and (min-width:700px) {
+    flex-flow: column wrap;
+  }
+}
+@mixin hiddenNav {
+  height:0;
+  overflow-x: hidden;
+  .visible & {
+    overflow: visible;
+    background: $hedBg;
+  }
+  @media screen and (min-width:700px) {
+    overflow-x:visible;
+  }
+}
+@mixin visibleNav {
+  height:0;
+  overflow:hidden;
+  .visible & {
+    overflow: visible;
+    // background: $hedBg;
+  }  
+  @media screen and (min-width:700px) {
+    height:auto;
+  }
+}
+@mixin hed01 {
+  @include logoLeft;
+  justify-content:space-between;
+  &__menu {
+    flex:0 1 auto;
+  }
+  &__nav {
+    order:-1;
+    flex:0 0 100%;
+    @include visibleNav;
+  }
+  @media screen and (min-width:700px) {
+    &__menu {
+      display:none;
+    }
+    &__nav {
+      position: relative;
+      order:0;
+      flex:1 1 50%;
+    }
+  }
+}
+@mixin hed02 {
+  @include logoCenter;
+  flex-wrap: nowrap;
+  &__menu {
+    order:-1;
+    flex:0 0 40px;
+    text-align:left;
+  }
+  &__nav {
+    flex:0 0 40px;
+    max-width: 40px;
+    @include hiddenNav;
+  }
+}
+@mixin hed03 {
+  @include logoLeft;
+  // align-items: center;
+  &__menu {
+    flex:0 1 auto;
+  }
+  &__nav {
+    order:-1;
+    flex:0 0 100%;
+    justify-self:flex-end;
+    @include visibleNav;
+  }
+  @media screen and (min-width:700px) {
+    &__nav {
+      order:0;
+      flex:1 1 34%;
+    }
+  }
+  @media screen and (min-width:960px) {
+    &__menu {
+      display:none;
+    }
+ }
+}
+@mixin hed04 {
+  @include logoRight;
+  &__menu {
+    flex:0 1 auto;
+  }
+  &__nav {
+    order:-1;
+    flex:0 0 100%;
+    @include visibleNav;
+  }
+  @media screen and (min-width:700px) {
+    &__menu {
+      display:none;
+    }
+    &__nav {
+      position: relative;
+      order:0;
+      flex:1 1 50%;
+    }
+  }
+}
+@mixin hed05 {
+  @include logoLeft;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  &__menu {
+    flex:1 0 auto;
+    text-align:left;
+  }
+  &__nav {
+    flex:1 0 40px;
+    @include hiddenNav;
+  }
+}
+@mixin hed06 {
+  @include logoLeft;
+  flex-wrap: nowrap;
+  &__menu {
+    order: 1;
+    flex:0 0 40px;
+    text-align:left;
+  }
+  &__nav {
+    flex:1 0 40px;
+    @include hiddenNav;
+  }
+}
+@mixin hed07 {
+  @include logoCol;
+  justify-content:space-between;
+  &__menu {
+    flex:0 1 auto;
+  }
+  &__nav {
+    order:-1;
+    flex:0 0 100%;
+    @include visibleNav;
+  }
+  @media screen and (min-width:700px) {
+    &__logo {
+      max-width: $logoDHeight * 2;
+    }
+    &__menu {
+      // display:none;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__nav {
+      position: relative;
+      order:0;
+      flex:1 1 50%;
+    }
+  }
+}
+@mixin hed08 {
+  @include logoCenter;
+  flex-wrap: nowrap;
+  &__menu {
+    flex:1 0 40px;
+    text-align:left;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__nav {
+    order:-1;
+    flex:1 0 40px;
+    @include hiddenNav;
+  }
+}
+@mixin hed09 {
+  @include logoRight;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  &__menu {
+    flex:0 0 $gap * 4;
+    text-align:left;
+  }
+  &__nav {
+    flex:1 0 $gap * 3;
+    @include hiddenNav;
+  }
+}

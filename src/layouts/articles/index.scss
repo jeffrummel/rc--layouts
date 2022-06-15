@@ -1,0 +1,86 @@
+@mixin articleGrid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 12px minmax(280px, 680px) 12px;
+  align-items: start;
+  @media screen and (min-width:700px) {
+    -ms-grid-columns: 8% 8% 40% 8% 8%;
+    grid-template-columns: repeat(2, minmax(24px,78px)) minmax(338px,728px) repeat(2, minmax(24px,78px));
+    gap:($gap * 1.5);
+  }
+  @media screen and (min-width:960px) {
+    gap:($gap * 3);
+  }
+  &__hed {
+    -ms-grid-row: 1;
+  }
+  &__body {
+    -ms-grid-row: 2;
+  }
+  &__hed,
+  &__body,
+  &__foot {
+    grid-column:1 / -1; 
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+}
+@mixin article01 {
+  @include articleGrid;
+  @media screen and (min-width:700px) {
+    &__hed {
+      grid-column:2 / -1;
+    }
+    &__body {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 2;
+      grid-column:2 / span 2; 
+    }
+    &__foot {
+      -ms-grid-column: 5;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 2;
+      grid-column:5 / span 1; 
+      top:24px;
+      position: sticky;
+    }
+  }
+}
+@mixin article02 {
+  @include articleGrid;
+  @media screen and (min-width:700px) {
+    &__hed {
+      grid-column:2 / -1;
+    }
+    &__body {
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 2;
+      grid-column:3 / span 2;
+    }
+    &__foot {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+      grid-column:2 / span 1;
+      grid-row:2; 
+      top:24px;
+      position: sticky;
+    }
+  }
+}
+@mixin article03 {
+  @include articleGrid;
+  @media screen and (min-width:700px) {
+    &__body {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 2;
+      grid-column:2 / span 2; 
+    }
+    &__foot {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 2;
+      -ms-grid-row: 3;
+      grid-column:2 / span 2; 
+    }
+  }
+}

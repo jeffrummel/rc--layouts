@@ -1,0 +1,26 @@
+.err {
+  grid-column: 2;
+  height: 68vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background: $marqBgM;
+  color: $marqColor;
+  @media screen and (min-width: 700px) {
+    grid-column: 2 /span 8;
+  }
+  @media screen and (min-width: 960px) {
+    grid-column: 2 /span 12;
+  }
+  &__hed {
+    &--title {
+      @extend %siteH2;
+    }
+  }
+  &__dek {
+    margin-top: $gap;
+    p {
+      @extend %siteFeatureP;
+    }
+  }
+}

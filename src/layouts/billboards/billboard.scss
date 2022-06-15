@@ -1,0 +1,303 @@
+@mixin bil01 {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  gap: ($gap * 2);
+  padding: $gap;
+  @media screen and (min-width: 760px) {
+    display: grid;
+    grid-template: auto 1fr / 2fr 3fr;
+    padding: 0;
+  }
+  &--hed,
+  &--dek {
+    width: 100%;
+  }
+  &--dek {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    p {
+      flex: 1;
+    }
+  }
+  &--grfx {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    order: -1;
+    // z-index: -1;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    > * {
+      flex:1 0 100%;
+      width:100%;
+      object-fit: cover;
+    }
+  
+  }
+}
+@mixin bil02 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: center;
+  padding:12px 44px;
+  // min-height: 80vh;
+  height: auto;
+}
+@mixin bil03 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding:20px;
+  margin: 15px 0;
+  height: auto;
+  @media screen and (min-width:700px) {
+    margin: 15px;
+  }
+  &--dek {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    align-items: flex-start;
+    p {
+      flex: 1 100%;
+    }
+  }
+  &--grfx {
+    order: -1;
+    flex: 1;
+    display: flex;
+    & img {
+      flex: 1;
+    }
+  }
+}
+@mixin bil04 {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding:20px;
+  margin: 15px 0;
+  height: auto;
+  @media screen and (min-width:700px) {
+    margin: 15px;
+  }
+  &--hed,
+  &--dek {
+    z-index: 2;
+  }
+  &--dek {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    align-items: flex-start;
+    p {
+      flex: 1 100%;
+    }
+  }
+  &--grfx {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include centerImg
+  }
+}
+@mixin bil05 {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  gap: ($gap * 2);
+  @media screen and (min-width: 760px) {
+    display: grid;
+    grid-template: auto 1fr / 2fr 3fr;
+  }
+  &--hed,
+  &--dek {
+    width: 100%;
+  }
+  &--dek {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    align-items: flex-start;
+    p {
+      flex: 1 100%;
+    }
+  }
+  &--grfx {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    order: -1;
+    // z-index: -1;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    > * {
+      flex:1 0 100%;
+      width:100%;
+      object-fit: cover;
+    }
+  
+  }
+}
+@mixin bil06 {
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: flex-end;
+  position: relative;
+  min-height:352px;
+  &--hed,
+  &--dek {
+    display: flex;
+    flex-flow:column nowrap;
+    // justify-content: flex-start;
+    max-width:588px;
+    padding:8px 16px;
+    text-shadow: 0 0 4px $foreground;
+  }
+  &--cta {
+    margin:8px 16px;
+  }
+  &--hed,
+  &--dek {
+    z-index: 2;
+  }
+  &--grfx {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include centerImg
+  }
+  @media screen and (max-width:700px) {
+  }
+  @media screen and (min-width:700px) {
+    &--hed {
+      padding:8px 64px;
+    }
+    &--dek {
+      padding:8px  64px;
+    }
+    &--cta {
+      margin:8px 0 18px;
+    }
+  }
+  @media screen and (min-width:1000px) {
+    &--hed {
+      padding:8px 64px 8px 116px;
+    }
+    &--dek {
+      padding:8px 64px 18px 116px;
+    }
+    &--cta {
+      margin:8px 0 18px;
+    }
+  }
+}
+@mixin bil07 {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding:20px;
+  margin: 15px 0;
+  height: auto;
+  @media screen and (min-width:700px) {
+    margin: 15px;
+  }
+  &--hed,
+  &--dek {
+    z-index: 2;
+  }
+  &--dek {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    align-items: flex-start;
+    p {
+      flex: 1 100%;
+    }
+  }
+  &--grfx {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include centerImg
+  }
+}
+@mixin bil08 {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: stretch;
+  padding: 24px;
+  &--hed,
+  &--dek {
+    width: 100%;
+  }
+  &--dek {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    flex: 1;
+    p {
+      flex: 1;
+    }
+  }
+  &--grfx {
+    order: -1;
+    flex: 1;
+    display: flex;
+    & img {
+      flex: 1;
+    }
+  }
+}
+@mixin bil09 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding:20px;
+  margin: 15px 0;
+  height: auto;
+  @media screen and (min-width:700px) {
+    margin: 15px;
+  }
+  &--grfx {
+    order: -1;
+    flex: 1;
+    display: flex;
+    & img {
+      flex: 1;
+    }
+  }
+}

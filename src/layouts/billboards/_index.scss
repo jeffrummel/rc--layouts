@@ -1,0 +1,162 @@
+%bilFlexR {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+%bilFlexC {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+%bilGrid {
+  @media screen and (min-width:700px) {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+  }
+}
+@mixin billboard01 {
+  align-items: stretch;
+  @extend %bilFlexR;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {
+    &__hed {
+      flex:0 0 100%;
+    }
+    &__item {
+      flex: 0 1 calc(50% - 36px);
+      margin:$gap ($gap * 1.5);
+    }
+  }
+}
+@mixin billboard02 {
+  align-items: stretch;
+  @extend %bilFlexR;
+  @media screen and (max-width:700px) {
+    flex-flow: column wrap;
+  }
+  @media screen and (min-width:700px) {
+    &__hed {
+      flex:0 0 100%;
+    }
+    &__item {
+      flex: 1 1 15%;
+    }
+  }
+}
+@mixin billboard03 {
+  align-items: stretch;
+  @extend %bilGrid;
+  @media screen and (max-width:700px) {
+    flex-flow: column wrap;
+  }
+  @media screen and (min-width:700px) {
+    &__hed {
+      grid-column: 1;
+      grid-row: 1 / span 4;
+    }
+    &__item {
+      flex: 1 1 25%;
+    }
+  }
+}
+@mixin billboard04 {
+  align-items: stretch;
+  @extend %bilGrid;
+  @media screen and (max-width:700px) {
+    flex-flow: column wrap;
+  }
+  @media screen and (min-width:700px) {
+    &__hed {
+      grid-column: 1;
+      grid-row: 1 / span 4;
+    }
+    &__item {
+      flex: 1 1 25%;
+    }
+  }
+}
+@mixin billboard05 {
+  @extend %bilFlexC;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {
+    &__hed {
+      width: 50%;
+      flex:0 0 100%;
+    }
+    &__item {
+      width: 50%;
+      flex: 1 1 auto;
+    }
+  }
+}
+@mixin billboard06 {
+  @include cardsFlexR;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {
+    &__item {
+      flex:1 0 50%;
+      &:first-of-type {
+        flex:0 0 100%;
+      }
+    }  
+  }
+}
+@mixin billboard07 {
+  align-items: stretch;
+  @extend %bilGrid;
+  @media screen and (max-width:700px) {
+    flex-flow: column wrap;
+  }
+  @media screen and (min-width:700px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    &__hed {
+      grid-column: 1 / span 1;
+      grid-row: 1 ;
+      margin: 0 0;
+    }
+    &__item {
+      flex: 1 1 20%;
+      // margin:0 0 0;
+      &:first-of-type {
+        // flex: 1 1 50%;
+      }
+    }
+  }
+}
+@mixin billboard08 {
+  align-items: stretch;
+  @extend %bilFlexR;
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {
+    &__hed {
+      flex:0 0 100%;
+    }
+    &__item {
+      flex: 0 1 calc(33% - 36px);
+      margin:$gap ($gap * 1.5);
+    }
+  }
+}
+@mixin billboard09 {
+  align-items: stretch;
+  @extend %bilGrid;
+  @media screen and (max-width:700px) {
+    flex-flow: column wrap;
+  }
+  @media screen and (min-width:700px) {
+    grid-template-columns: 33% 33% 33%;
+    &__hed {
+      grid-column: 1 / span 1;
+      grid-row: 1 ;
+      margin: 0 0;
+    }
+    &__item {
+      flex: 1 1 20%;
+      // margin:0 0 0;
+      &:first-of-type {
+        // flex: 1 1 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,173 @@
+@mixin form00 {
+  &__set,
+  .mc-field-group {
+    flex:1 1 40%;
+    margin:12px;
+    &--label,
+    label {
+      display:block;
+      color:$marqLabel;
+      @extend %formLabel;
+    }
+    &--input,
+    input {
+      box-sizing: border-box;
+      width:100%;
+      height:40px;
+      padding:2px 14px 0;
+      background:$marqInputBg;
+      color:$marqInput;
+      @extend %formInput;
+    }
+    &--txt,
+    textarea {
+      
+      width:100%;
+      padding:2px 14px 0;
+      background:$marqInputBg;
+      color:$marqInput;
+      @extend %formInput;
+
+    }
+  }
+  &__pairs {
+    flex:1 1 100%;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content:space-between;
+    align-items: flex-start;
+    margin: 12px;
+    &--hed {
+      flex: 1 0 100%;
+      @extend %siteH5;
+    }
+    &--label {
+      
+      flex: 0 1 calc(100% - 48px);
+      padding:2px 14px 0 0;
+      @extend %formLabel;
+    }
+    &--radio {
+      flex: 0 1 40px;
+      margin-bottom: 8px;
+    }
+  }
+  .clear {
+    flex: 0 1 100%;
+  }
+  &--action,
+  input.button {
+    margin:12px;
+    @include cta;
+    @extend %standardCta;
+  }
+}
+@mixin form01($border: 0,$shadow: 6px) {
+  &__set,
+  .mc-field-group {
+    &--input,
+    &--txt,
+    input {
+      border:$border solid $marqInputBorder;
+      border-radius: 3px;
+      box-shadow: 0 0 $shadow $marqInputBorder  inset;
+    }
+  }
+  &--action,
+  input.button {
+    border:$border;
+    border-radius: 3px;
+  }
+}
+@mixin form02($border: 1px, $shadow: 6px) {
+  &__set,
+  .mc-field-group {
+    &--input,
+    &--txt,
+    &-fields input[type="text"],
+    &-fields input[type="tel"],
+    &-fields input[type="email"],
+    &-fields input[type="password"],
+    &-fields input[type="url"],
+    &-fields input[type="number"],
+    input {
+      border-width: 0 0 $border $border;
+      border-style: solid;
+      border-radius:0;
+      .marq & {
+        border-color: transparent transparent $marqInputBorder $marqInputBorder;
+        box-shadow: $shadow 0 0 $marqInputBorder inset;  
+      }
+      .landing &,
+      .embed & {
+        border-color: transparent transparent $defaultInputBorder $defaultInputBorder;
+        box-shadow: $shadow 0 0 $defaultInputBorder inset;  
+      }
+    }
+  }
+  &--action,
+  input.button {
+    border:0;
+    box-shadow: $border 0 0 $ctaBorder  inset;
+  }
+}
+@mixin form03($border: -4px,$shadow: 6px) {
+  &__set,
+  .mc-field-group {
+    &--input,
+    &--txt,
+    input {
+      border:0;
+      box-shadow: 0 $border 0 $marqInputBorder inset;
+    }
+  }
+  &--action,
+  input.button {
+    border:0;
+    box-shadow: 0 $border 0 $ctaBorder  inset;
+  }
+}
+@mixin form04($border: 1px) {
+  &__set,
+  .mc-field-group {
+    &--input,
+    &--txt,
+    input {
+      border:$border solid $marqInputBorder;
+    }
+  }
+  &--action,
+  input.button {
+    border:$border solid $ctaBorder;
+  }
+}
+@mixin form05($border: 1px) {
+  &__set,
+  .mc-field-group {
+    &--txt,
+    &--input {
+      border:$border solid $marqInputBorder;
+      border-radius: 3px;
+    }
+  }
+  &--action,
+  input.button {
+    border:$border;
+    // border-radius: 3px;
+  }
+}
+@mixin form06($border: 0) {
+  &__set,
+  .mc-field-group {
+    &--txt,
+    &--input {
+      border:$border solid $marqInputBorder;
+      border-radius: 20px;
+    }
+  }
+  &--action,
+  input.button {
+    border:$border;
+    border-radius: 20px;
+  }
+}

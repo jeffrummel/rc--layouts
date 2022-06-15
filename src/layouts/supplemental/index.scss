@@ -1,0 +1,372 @@
+@mixin supFlexC {
+  display: flex;
+  flex-flow: column nowrap;
+  // border:0 solid $supBorder;
+  @media screen and (min-width:700px) {
+  }
+}
+@mixin supFlexR {
+  display: flex;
+  flex-flow: column nowrap;
+  // border:0 solid $supBorder;
+  @media screen and (min-width:700px) {
+    flex-direction: row;
+  }
+}
+@mixin supGridR {
+  // border:0 solid $supBorder;
+  @media screen and (min-width:700px) {
+    display: grid;
+  }
+}
+@mixin centerImg {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height:auto;
+  img {
+    height:auto;
+    object-fit: cover;
+    @media screen and (min-width:700px) {
+    min-height:100%;
+  }
+  }
+}
+@mixin sup01 {
+  @include supFlexC;
+  align-items: center;
+  justify-content: center;
+  padding:24px;
+  &__hed,
+  &__dek {
+    max-width: 642px;
+  }
+  &__grfx {
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    z-index: -1;
+    overflow: hidden;
+    height:100%;
+    @include centerImg;
+  }
+  @media screen and (min-width:700px) {
+    padding:64px;
+  }
+  @media screen and (min-width:960px) {
+  }
+}
+@mixin sup02 {
+  display: flex;
+  flex-flow: column nowrap;
+  @include supGridR;
+  grid-template: auto auto / 50% 50%;
+  min-height:768px;    
+  &__hed,
+  &__dek {
+    padding: 8px 16px 0;
+    max-width: 642px;
+  }
+  &__grfx {
+    order:-1;
+    height:100%;
+    @include centerImg;
+  }
+  @media screen and (min-width:700px) {
+    justify-items: center;
+    grid-template: auto auto / 50% 50%;
+    &__hed {
+      grid-column: 2 / span 1;
+      align-self: end;
+      max-width:420px;
+    }
+    &__dek {
+      grid-column: 2 / span 1;
+      align-self:start;
+      max-width:420px;
+    }
+    &__grfx {
+      grid-column: 1 / span 1;
+      grid-row:1 / -1;
+      align-self: stretch;
+    }
+  }
+  @media screen and (min-width:960px) {
+  }
+}
+@mixin sup03 {
+  // z-index:-1;
+  display: flex;
+  flex-flow:column;
+  justify-content: flex-end;
+  // min-height: 680px;
+  background: $supBg;
+  @include supGridR;
+  &__hed,
+  &__dek {
+    flex:0 0 auto;
+    max-width: 462px;
+  }
+  &__grfx {
+    order:-1;
+    height:100%;
+    @include centerImg;
+  }
+  @media screen and (min-width:700px) {
+    grid-template: auto auto / 50% 50%;
+    min-height:768px;    
+    justify-items: center;
+    &__hed {
+      width:100%;
+      grid-column: 1 / span 1;
+      grid-row:1 / span 1;
+      align-self: end;
+    }
+    &__dek {
+      width:100%;
+      grid-column: 1 / span 1;
+      grid-row:2 / span 1;
+      align-self:start;
+      max-width:462px;
+    }
+    &__grfx {
+      // z-index:-1;
+      grid-column: 2 / span 2;
+      grid-row:1 / -1;
+      align-self: stretch;
+      @include centerImg;
+    }
+  }
+  @media screen and (min-width:960px) {
+  }
+}
+@mixin sup04 {
+  display: flex;
+  flex-flow:column nowrap;
+  @include supGridR;
+  background: $supBg;
+  &__grfx {
+    order:-1;
+    max-width: 532px;
+    @include centerImg;
+  }
+  @media screen and (min-width:700px) {
+    grid-template: auto auto / minmax(45%, 569px)  minmax(45%, 569px);
+    justify-items: start;
+    &__hed {
+      grid-column: 2 / span 1;
+      align-self: end;
+      // max-width:420px;
+    }
+    &__dek {
+      grid-column: 2 / span 1;
+      align-self:start;
+      // max-width:420px;
+    }
+    &__grfx {
+      grid-column: 1 / span 1;
+      grid-row:1 / -1;
+      justify-self: end;
+      align-self: center;
+    }
+  }
+  @media screen and (min-width:960px) {
+    grid-gap:24px 36px;
+  }
+}
+@mixin sup05 {
+  @include supFlexC;
+  align-items: center;
+  justify-content: flex-start;
+  background: $supBg;
+  &__hed,
+  &__dek {
+    max-width: 642px;
+    // margin-top:16px;
+  }
+  &__grfx {
+    order:-1;
+    overflow:hidden;
+    flex:0 0 482px;
+    @include centerImg;
+  }
+  @media screen and (max-width:700px) {
+    align-items: flex-start;
+  }
+  @media screen and (min-width:700px) {
+    flex:0 0 428px;
+  }
+  @media screen and (min-width:960px) {
+    // margin:64px 0;
+  }
+}
+@mixin sup06 {
+  display: flex;
+  flex-flow: column;
+  @include supGridR;
+  grid-template: minmax(138px,234px) auto/1fr minmax(138px,570px) minmax(248px,760px) 1fr;
+  background: $supBg;
+  &__hed,
+  &__dek {
+    flex:1 1 50%;
+  }
+  &__grfx {
+    order:-1;
+    @include centerImg;
+  }
+  @media screen and (min-width:700px) {
+    justify-content: center;
+    align-items: stretch;
+    &:before {
+      content:'';
+      background:$supHedBg;
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+
+    }
+    &__hed {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+      align-self: center;
+    }
+    &__dek {
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 1;
+      align-self:start;
+      // max-width:420px;
+    }
+    &__grfx {
+      grid-column: 3 / span 2;
+      grid-row:1 / span 1;
+      justify-self: stretch;
+      align-self: stretch;
+    }
+  }
+  @media screen and (min-width:960px) {
+  }
+}
+@mixin sup07 {
+  display: flex;
+  flex-flow: column;
+  @include supGridR;
+  &__hed {
+    background:$supHedBg;
+  }
+  &__grfx {
+    order:-1;
+    @include centerImg;
+  }
+  @media screen and (min-width:700px) {
+    grid-template: auto minmax(138px,234px)/1fr minmax(248px,760px) minmax(138px,570px) 1fr;
+    justify-self: stretch;
+    align-self: stretch;
+    &:before {
+      content:'';
+      background:$supHedBg;
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+    }
+    &:after {
+      z-index: -1;
+      content:'';
+      background:$supBg;
+      grid-column: 3 / span 2;
+      grid-row: 1 / span 2;
+    }
+    &__hed {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+      align-self: end;
+      background: transparent;
+    }
+    &__dek {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 2;
+      align-self:center;
+    }
+    &__grfx {
+      grid-column: 1 / span 2;
+      grid-row:2 / span 1;
+      justify-self: stretch;
+      align-self: stretch;
+    }
+  }
+}
+@mixin sup08 {
+  display: grid;
+  grid: 1fr auto / auto;
+  align-items: center;
+  background: $supBg;
+  @include supGridR;
+  &__hed,
+  &__grfx {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  &__hed {
+    z-index:1;
+  }
+  &__grfx {
+    @include centerImg;
+  }
+  @media screen and (min-width:700px) {
+    grid-template: auto/1fr minmax(248px,877px) minmax(138px,420px) 1fr;
+    justify-items: start;
+    &__hed {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+      align-self: center;
+      justify-self: center;
+      max-width:560px;
+    }
+    &__dek {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+      align-self:center;
+      // max-width:420px;
+    }
+    &__grfx {
+      grid-column: 1 / span 2;
+      grid-row:1 / span 1;
+      justify-self: stretch;
+      align-self: stretch;
+    }
+  }
+}
+@mixin sup09 {
+  display: grid;
+  grid: auto auto / auto;
+  align-items: center;
+  background: $supBg;
+  @include supGridR;
+  &__hed,
+  &__grfx {
+    grid-column: 1;
+    grid-row: 1;
+    // z-index:0;
+    @include centerImg;
+  }
+  @media screen and (min-width:700px) {
+    grid-template: auto/1fr repeat(2, minmax(42%, 648px))  1fr;
+    justify-items: start;
+    &__hed {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+      align-self: center;
+      justify-self: center;
+      max-width:524px;
+    }
+    &__dek {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+      align-self:center;
+    }
+    &__grfx {
+      grid-column: 1 / span 2;
+      grid-row:1 / span 1;
+      justify-self: stretch;
+      align-self: stretch;
+    }
+  }
+}

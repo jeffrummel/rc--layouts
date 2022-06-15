@@ -1,0 +1,14 @@
+.marq {
+  &__hed {
+    max-width: 100%;
+  }
+  .validate {
+    flex:0 0 100%;
+  }
+}
+.cards {
+  overflow:hidden;
+  &__item {
+    flex:1 1 30%;
+  }
+}

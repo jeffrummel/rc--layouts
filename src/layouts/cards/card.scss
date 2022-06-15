@@ -1,0 +1,253 @@
+@mixin centerImg {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    img {
+      min-height:100%;
+      object-fit: cover;
+    }
+}
+%cardFlex {
+  display: flex;
+  flex-flow:column nowrap;
+}
+%cardGrid {
+  display: flex;
+  flex-flow:column nowrap;
+  @media screen and (min-width:700px) {
+    display: grid;
+    grid-template-columns: minmax(288px, 532px) auto;
+    grid-template-rows:1fr auto auto;
+    align-items:end;
+  }
+}
+@mixin card01 {
+  @extend %cardFlex;
+  justify-content: flex-end;
+  position: relative;
+  min-height: 288px;
+  &--grfx {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height:288px;
+    @include centerImg;
+    > * {
+      flex: 0 0 auto;
+    }
+  }
+  @media screen and (max-width:700px) {
+  }
+  @media screen and (min-width:700px) {
+  }
+}
+@mixin card02 {
+  @extend %cardFlex;
+  &--grfx {
+    order:-1;
+    height:288px;
+    @include centerImg;
+
+  }
+  @media screen and (max-width:700px) {
+  }
+  @media screen and (min-width:700px) {
+  }
+}
+@mixin card03 {
+  @extend %cardFlex;
+  justify-content: flex-start;
+  position: relative;
+  min-height: calc(288px + 116px);
+  overflow: hidden;
+  &--hed {
+    order:-1;
+    flex: 0 0 288px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+  }
+  &--dek {
+    min-height:96px;
+  }
+  &--grfx {
+    position: relative;
+    top:0;
+    order:-1;
+    z-index: -1;
+    height:0;
+    overflow: visible;
+    img {
+      position: absolute;
+      bottom: 0;
+      min-height: 304px;
+      max-width: initial;
+    }
+    // @include centerImg;
+  }
+  @media screen and (max-width:700px) {
+  }
+  @media screen and (min-width:700px) {
+    &--grfx {
+      img {
+        max-width: 120%;
+      }
+    }
+  }
+}
+@mixin card04 {
+  @extend %cardFlex;
+  align-content: stretch;
+  justify-content:space-evenly;
+  &--hed {
+    flex: 1 auto;
+    display: flex;
+    align-items: flex-end;
+  }
+  &--dek {
+    flex:1 0 auto;
+    order:1;
+    min-height:96px;
+  }
+  &--cta {
+    order:1;
+  }
+  &--grfx {
+    height:288px;
+    @include centerImg;
+  }
+  @media screen and (max-width:700px) {}
+  @media screen and (min-width:700px) {}
+}
+@mixin card05 {
+  @extend %cardFlex;
+  justify-content: flex-end;
+  position: relative;
+  min-height: 288px;
+  &--dek {
+    flex:0 1 30%;
+  }
+  &--grfx {
+    position: absolute;
+    top:0;
+    z-index: -1;
+    width:100%;
+    height:288px;
+    @include centerImg;
+  }
+}
+@mixin card06 {
+  @extend %cardFlex;
+  justify-content: flex-end;
+  position: relative;
+  min-height:352px;
+  &--hed,
+  &--dek {
+    max-width:588px;
+    text-shadow: 0 0 4px $foreground;
+  }
+  &--grfx {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: -1;
+    width:100%;
+    min-height:352px;
+    @include centerImg;
+    justify-content: center;
+  }
+}
+@mixin card07 {
+  @extend %cardGrid;
+  &--grfx {
+    @include centerImg;
+  }
+  @media screen and (max-width:700px) {
+    &--grfx {
+      order:-1;
+    }
+  }
+  @media screen and (min-width:700px) {
+    &--dek {
+      max-width:532px;
+    }
+    &--cta {
+      justify-self: start;
+    }
+    &--grfx {
+      grid-row:1 / span 3;
+      grid-column: 1;
+      display: flex;
+      height:288px;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+@mixin card08 {
+  @extend %cardGrid;
+  text-align: left;
+  &--grfx {
+    @include centerImg;
+  }
+  @media screen and (max-width:700px) {
+    &--grfx {
+      order:-1;
+    }
+  }
+  @media screen and (min-width:700px) {
+    &:nth-of-type(even) {
+      direction: rtl;
+    }
+    &:nth-of-type(even) &--hed,
+    &:nth-of-type(even) &--dek,
+    &:nth-of-type(even) &--cta {
+        justify-self: end;
+    }
+    &--hed {
+      max-width:740px;
+    }
+    &--dek {
+      direction: ltr;
+      max-width:532px;
+    }
+    &--cta {
+      justify-self: start;
+    }
+    &--grfx {
+      grid-row:1 / span 3;
+      grid-column: 1;
+      display: flex;
+      height:288px;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+@mixin card09 {
+  @extend %cardFlex;
+  &--dek {
+    max-width: 535px;
+  }
+  &--grfx {
+    order:-1;
+    align-items: stretch;
+    overflow: hidden;
+    @include centerImg;
+  }
+  @media screen and (max-width:700px) {
+    // &--grfx {
+    // }
+  }
+  @media screen and (min-width:700px) {
+    &:first-of-type &--grfx {
+      flex: 0 0 72%;
+    }
+  }
+}

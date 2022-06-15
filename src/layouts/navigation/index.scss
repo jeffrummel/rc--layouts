@@ -1,0 +1,641 @@
+%nav {
+  display:flex;
+  &__secondary {
+    display: flex;
+    flex-flow:row wrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    .visible & {
+      position: fixed;
+      bottom:0;
+      left:0;
+      right:0;
+      height: 30vh;
+      z-index: 1;
+    }
+  }
+}
+%visibleNav {
+  @media screen and (min-width:700px) {
+    height: auto;
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+@mixin hed01 {
+  @extend %nav;
+  @extend %visibleNav;
+  flex-flow:column nowrap;
+  align-items: center;
+  &__secondary {
+    display: flex;
+    flex-flow:row wrap;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
+  @media screen and (max-width:700px) {
+    &__primary,
+    &__secondary {
+      .visible & {
+        padding-top:$logoMHeight;
+      }
+    }
+  }
+  @media screen and (min-width:700px) {
+    &__primary,
+    &__secondary {
+      width: 100%;
+      flex: 0 0 auto;
+      display: flex;
+      flex-flow:row wrap;
+      align-items: baseline;
+      justify-content: flex-end;
+    }
+    &__primary {
+      order:1; 
+    }
+  }
+}
+@mixin hed02 {
+  flex-flow:column nowrap;
+  align-items: flex-end;
+  &__primary {
+    .visible & {
+      top:0;
+      display: flex;
+      flex-flow:column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position:fixed;
+      padding-top:$logoMHeight;
+      left:0;
+      right:0;
+      bottom:0;
+      background: $hedBg;
+    }
+  }
+  @media screen and (max-width:700px) {  
+    .visible & {
+      height:auto;
+    }
+    &__secondary {
+      &--donate {
+        position: absolute;
+        right: $gap;
+        top: $gap;
+      }
+      .visible & {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom:0;
+        padding-top: $logoMHeight;
+        z-index: 1;
+      }
+    }
+  }  
+  @media screen and (min-width:700px) {
+    height: auto;
+    &__primary {
+      position: fixed;
+      height:0;
+      overflow: hidden;
+      left:0;
+      right:0;
+      .visible & {
+        max-width:288px;
+        height:100vh;
+        top:0;
+      }
+    }
+  }
+  @media screen and (min-width:700px) and (max-width:960px) {
+    &__primary {
+      .visible & {
+        height: 100vh;
+        padding-top:$logoTHeight;
+      }
+    }
+  }
+  @media screen and (min-width:960px) {
+    &__primary {
+      &--item {
+        padding-left:42px;
+      }
+      .visible & {
+        padding-top:$logoTHeight;
+      }
+    }
+  }
+
+}
+@mixin hed03 {
+  align-items: flex-end;
+  &__primary {
+    .visible & {
+      // background: $hedBg;
+      display: flex;
+      // justify-content: center;
+      // align-items: center;
+    }
+  }
+  &__secondary {
+    display: flex;
+  }
+  @media screen and (max-width:960px) {  
+    display: flex;
+    flex-flow:column nowrap;
+    .visible & {
+      height:auto;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $hedBg;
+      }
+    }
+    &__primary {
+      .visible & {
+        flex-flow:column nowrap;
+        position:absolute;
+        top:$logoMHeight;
+        left:0;
+        right:0;
+        bottom:0;
+        padding-bottom: 30vh;
+      }
+      &--item {
+        width: 100%;
+      }
+    }
+    &__secondary {
+      flex-flow: row wrap;
+      .visible & {
+        // position: fixed;
+        top:5px;
+        left:0;
+        right:0;
+        z-index: 1;
+      }
+    }
+  }  
+  @media screen and (min-width:700px) {
+    display: flex;
+    flex-flow:row wrap;
+    height: auto;
+    overflow: hidden;
+    flex-flow:row-reverse nowrap;
+    justify-content:flex-start;
+    .visible & {
+      overflow: visible;
+    }
+    &__primary {
+      overflow: hidden;
+      left:0;
+      right:0;
+    }
+    &__secondary {
+      height:100%;
+    }
+    }
+  @media screen and (min-width:700px) and (max-width:960px) {
+    &__primary {
+      position: absolute;
+      height:0;
+      top:$logoTHeight;
+      .visible & {
+        height: calc(100vh - 112px);
+      }
+    }
+  }
+  @media screen and (min-width:960px) {
+    &__primary {
+      position: relative;
+      display:flex;
+      flex-flow:row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      .visible & {
+        height: auto;
+      }
+    }
+  }
+}
+@mixin hed04 {
+  flex-flow:column wrap;
+  align-items: center;
+  .visible & {
+    height:auto;
+    min-height:100vh;
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    padding: $gap + $logoMHeight $gap $gap $gap;
+    background:white;
+  }
+  &__secondary {
+    display: flex;
+  }
+  @media screen and (min-width:700px) {
+    height: auto;
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__primary {
+      display: flex;
+      flex-flow:row wrap;
+      align-items: baseline;
+      justify-content: flex-start;
+      order:1; 
+    }
+    &__secondary {}
+    }
+  @media screen and (min-width:700px) and (max-width:960px) {
+  }
+  @media screen and (min-width:960px) {
+  }
+}
+@mixin hed05 {
+  flex-flow:column nowrap;
+  align-items: flex-end;
+  &__primary {
+    .visible & {
+      top:0;
+      display: flex;
+      flex-flow:column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background: $hedBg;
+    }
+  }
+  &__secondary {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media screen and (max-width:700px) {  
+    .visible & {
+      height:auto;
+    }
+    &__primary {
+      .visible & {
+        position:fixed;
+        padding-top:$logoMHeight;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background: $hedBg;
+      }
+    }
+    &__secondary {
+      .visible & {
+        position: fixed;
+        bottom:0;
+        // left:0;
+        right:12px;
+        height: 30vh;
+        z-index: 1;
+      }
+    }
+  }  
+  @media screen and (min-width:700px) {
+    height: auto;
+    overflow: hidden;
+    .visible & {
+      overflow: visible;
+    }
+    &__primary {
+      position: fixed;
+      height:0;
+      overflow: hidden;
+      left:0;
+      right:0;
+      .visible & {
+        max-width:288px;
+        height:100vh;
+        top:0;
+      }
+    }
+    &__secondary {
+      height:100%;
+    }
+  }
+  @media screen and (min-width:700px) and (max-width:960px) {
+    &__primary {
+      .visible & {
+        height: 100vh;
+        padding-top:165px;
+      }
+    }
+  }
+  @media screen and (min-width:960px) {
+    &__primary {
+      &--item {
+        padding-left:42px;
+      }
+      .visible & {
+        padding-top:165px;
+      }
+    }
+  }
+}
+@mixin hed06 {
+  flex-flow:column nowrap;
+  align-items: flex-end;
+  &__primary {
+    .visible & {
+      background: $hedBg;
+      display: flex;
+      flex-flow:column nowrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  &__secondary {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media screen and (max-width:700px) {  
+    .visible & {
+      height:auto;
+    }
+    &__primary {
+      .visible & {
+        position:absolute;
+        top:$logoMHeight;
+        left:0;
+        right:0;
+        bottom:0;
+        padding-bottom: 30vh;
+      }
+    }
+    &__secondary {
+      .visible & {
+        position: fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        height: 30vh;
+        z-index: 1;
+      }
+    }
+  }  
+  @media screen and (min-width:700px) {
+    height: auto;
+    overflow: hidden;
+    .visible & {
+      overflow: visible;
+    }
+    &__primary {
+      position: absolute;
+      height:0;
+      overflow: hidden;
+      left:0;
+      right:0;
+    }
+    &__secondary {
+      height:100%;
+    }
+    }
+  @media screen and (min-width:700px) and (max-width:960px) {
+    &__primary {
+      top:$logoTHeight;
+      .visible & {
+        height: 100vh;
+      }
+    }
+  }
+  @media screen and (min-width:960px) {
+    &__primary {
+      top:$logoNHeight;
+      .visible & {
+        height: 100vh;
+      }
+    }
+  }
+
+}
+@mixin hed07 {
+  flex-flow:column-reverse nowrap;
+  align-items: flex-end;
+  height: auto;
+  &__secondary {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  &__primary {
+    .visible & {
+      background: $hedBg;
+      display: flex;
+      flex-flow:column nowrap;
+      justify-content: flex-start;
+    }
+  }
+  @media screen and (max-width:700px) {  
+    &__primary {
+      height: 0;
+      overflow: hidden;
+      .visible & {
+        position:absolute;
+        top:$logoMHeight * 2;
+        left:0;
+        right:0;
+        bottom:0;
+        padding-bottom: 30vh;
+      }
+    }
+    &__secondary {
+    }
+  }  
+  @media screen and (min-width:700px) {
+    overflow: hidden;
+    .visible & {
+      overflow: visible;
+    }
+    &__primary {
+      position: absolute;
+      height:0;
+      overflow: hidden;
+      left:0;
+      right:0;
+    }
+    &__secondary {
+      height:100%;
+    }
+    }
+  @media screen and (min-width:700px) and (max-width:960px) {
+    &__primary {
+      top:$logoTHeight;
+      .visible & {
+        height: calc(100vh - $logoTHeight);
+      }
+    }
+  }
+  @media screen and (min-width:960px) {
+    &__secondary {
+      // height: $gap * 4.5;
+    }
+    &__primary {
+      top: $gap * 4.5;
+      .visible & {
+        height: calc(100vh - #{$logoDHeight} );
+      }
+    }
+  }
+
+}
+@mixin hed08 {
+  flex-flow:column nowrap;
+  align-items: flex-start;
+  &__secondary {
+    align-items: flex-start;
+  }
+  &__primary {
+    .visible & {
+      background: $hedBg;
+      display: flex;
+      flex-flow:column nowrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  @media screen and (max-width:700px) {  
+    .visible & {
+      height:auto;
+    }
+    &__primary {
+      .visible & {
+        position:absolute;
+        top:$logoMHeight;
+        left:0;
+        right:0;
+        bottom:0;
+        padding-bottom: 30vh;
+      }
+    }
+    &__secondary {
+      .visible & {
+        position: fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        height: 30vh;
+        z-index: 1;
+      }
+    }
+  }  
+  @media screen and (min-width:700px) {
+    height: auto;
+    overflow: hidden;
+    .visible & {
+      overflow: visible;
+    }
+    &__primary {
+      position: absolute;
+      height:0;
+      overflow: hidden;
+      left:0;
+      right:0;
+    }
+    &__secondary {
+      height:100%;
+    }
+    }
+  @media screen and (min-width:700px) and (max-width:960px) {
+    &__primary {
+      top:$logoTHeight;
+      .visible & {
+        height: calc(100vh - 112px);
+      }
+    }
+  }
+  @media screen and (min-width:960px) {
+    &__primary {
+      top:$logoNHeight;
+      .visible & {
+        height: calc(100vh - 118px);
+      }
+    }
+  }
+
+}
+@mixin hed09 {
+  flex-flow:column-reverse nowrap;
+  align-items: flex-start;
+  &__primary {
+    .visible & {
+      background: $hedBg;
+      display: flex;
+      flex-flow:column nowrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  @media screen and (max-width:700px) {  
+    .visible & {
+      height:auto;
+    }
+    &__primary {
+      .visible & {
+        position:absolute;
+        top:$logoMHeight;
+        left:0;
+        right:0;
+        bottom:0;
+        padding-bottom: 30vh;
+      }
+    }
+    &__secondary {
+      .visible & {
+        position: fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        height: 30vh;
+        z-index: 1;
+      }
+    }
+  }  
+  @media screen and (min-width:700px) {
+    height: auto;
+    overflow: hidden;
+    .visible & {
+      overflow: visible;
+    }
+    &__primary {
+      position: absolute;
+      height:0;
+      overflow: hidden;
+      left:0;
+      right:0;
+    }
+    &__secondary {
+      height:100%;
+    }
+    }
+  @media screen and (min-width:700px) and (max-width:960px) {
+    &__primary {
+      top:$logoTHeight;
+      .visible & {
+        height: calc(100vh - 112px);
+      }
+    }
+  }
+  @media screen and (min-width:960px) {
+    &__primary {
+      top:$logoNHeight;
+      .visible & {
+        height: calc(100vh - 118px);
+      }
+    }
+  }
+
+}

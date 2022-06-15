@@ -1,0 +1,345 @@
+@import "../layouts/forms/index";
+.marq__form {
+  #can_embed_form {
+    background: transparent !important;
+  }
+}
+
+#can_embed_form_inner,
+.new_answer {
+  h2,
+  h3,
+  h4:not(.mt10),
+  .form_builder_output,
+  .international_link-wrap,
+  .country_drop_wrap,
+  .ajax-loading,
+  #action_info {
+    @extend %clipIt;
+    margin: 0;
+  }
+  li {
+    &::before {
+      content: '';
+      @extend %clipIt;
+    }
+  }
+  textarea {
+    box-sizing: border-box;
+    min-height: 60px;
+    width:100%;
+    padding:14px 10px;
+    background:$marqInputBg;
+    border-width:1px 1px 1px 1px;
+    border-color: $marqInputBorder;
+    border-style: solid;
+    color:$marqInput;
+    @extend %formInput;
+  }
+
+}
+.can_thank_you_wrap .clearfix div:nth-last-child(-n+2),
+#referral_code_select_wrap {
+  @extend %clipIt;
+}
+.clearfix {
+  & h4 {
+    color: $marqColor;
+    @extend %siteH3;
+    margin: 0 0 0 15px;
+  }
+  & h4 .tooltip.js-tooltip.ml10 > span,
+  & label.block.graytext,
+  & .js-direct_link.direct_link {
+    @extend %clipIt;
+  }
+  & .can_thank_you-block {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+}
+.share_button {
+  width: 30px;
+  height: 30px;
+  margin:0 10px;
+  display: inline-block;
+  span {
+    @extend %clipIt;
+  }
+  &.share-facebook {
+    background: url(/img/uploads/facebook.png);
+    background-size: auto 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &.share-twitter {
+    background: url(/img/uploads/twitter.png);
+    background-size: auto 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+#mobile_opt_in {
+  label.checkbox {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    #mobile_opt_in_checkbox {
+      margin: 5px 5px 0 0;
+    }
+  }
+}
+#error_message {
+  @extend %siteStandardP;
+  color: $marqColor;
+}
+#mobile_opt_in_default {
+  @extend %siteStandardP;
+  color: $marqColor;
+}
+#form_col1,
+#new_answer ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  li {
+    width: 100%;
+  }
+  .form_builder_output.js-form_builder_output,
+  #referral_code_select_wrap,
+  .clearfix .can_thank_you-block {
+    @extend %clipIt;
+  }
+  li,
+  .core_field {
+    margin: 0 0 11px;
+    list-style: none;
+    &#action_welcome_message {
+      flex: 0 0 100%;
+    }
+    &.custom_fields.js-custom_fields.mt20 {
+      flex: 0 0 100%;
+      color: $marqColor;
+      p {
+        @extend %siteSmallP;
+      }
+    }
+  }
+  .can_select {
+    width: 100% !important;
+  }
+  span.relative.block {
+    flex: 0 0 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .control-group {
+    flex: 0 0 100%;
+    color:$marqInput;
+    @extend %formInput;
+    padding:2px 0 0;
+    .donate & {
+      color: $marqColor;
+    }
+  }
+}
+.action_status_tracker {
+  .centertext {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+    color: $marqColor;
+    @extend %siteH3;
+  }
+}
+.action_status_running_total {
+  flex: 1 auto;
+}
+.action_sidebar h4,
+.action_status_goal {
+  @extend %clipIt;
+}
+.action_status_status_bar {
+  flex: 1 0 50%;
+  max-width: 329px;
+  height: 27px;
+  margin-right: 24px;
+  background: #D8D8D8;
+  > span {
+    display: block;
+    height: 27px;
+  }
+  .action_status_status_bar-grow {
+    display: block;
+    height: 27px;
+    background: $action;
+  }
+}
+.state_wrap {
+  flex: 0 1 45%;
+  margin:0;
+}
+.floatlabel {
+  &-wrapper {
+    flex: 0 1 46%;
+    margin:4px 0 12px;
+  }
+  &-label {
+    @extend %clipIt;
+  }
+  &-input {
+    border-width: 1px;
+    border-color: $marqInputBorder;
+    box-sizing: border-box;
+    width:100%;
+    height:36px;
+    padding:14px 10px;
+    background:$marqInputBg;
+    color:$marqInput;
+    @extend %formInput;
+  }
+}
+.can_selectInner {
+  border-width: 1px;
+  border-color: $marqInputBorder;
+  border-style: solid;
+  box-sizing: border-box;
+  width:100% !important;
+  height:36px;
+  padding:0 10px 0;
+  background:$marqInputBg;
+  color:$marqInput;
+  @extend %formInput;  
+}
+#new_answer ul li {
+  &.js-d_sharing {
+    @extend %clipIt;
+  }
+  &.js-error_message,
+  #action_welcome_message {
+    flex: 0 0 100%;
+  }
+  label {
+    @extend %formLabel;
+  }
+  .js-d_sharing {
+    @extend %formInput;
+    min-height:40px;
+    display: flex;
+    align-items: center;
+    padding:15px 0 0;
+    .marq & {
+      color:$marqInput;
+      label {
+        color: $marqLabel;
+      }
+    }
+    .donate & {
+      color: $marqColor;
+    }
+    li {
+      list-style: none;
+      margin-left: 0;
+    }
+  }
+}
+#form_col2 {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-between;
+  align-items: center;
+  label {
+    @extend %formLabel;
+  }
+  .js-d_sharing {
+    @extend %formInput;
+    width: 100%;
+    min-height:40px;
+    display: flex;
+    align-items: center;
+    padding:15px 0 0;
+    .marq & {
+      color:$marqInput;
+      label {
+        color: $marqLabel;
+      }
+    }
+    .donate & {
+      color: $marqColor;
+    }
+    li {
+      list-style: none;
+      margin-left: 0;
+    }
+  }
+}
+#can-form-area-wegovern-form {
+  width: 100%;
+}
+#can_main_col,
+#logo_wrap {
+  @extend %clipIt;
+}
+#can_thank_you {
+  padding: 0 15px;
+  & > h1,
+  & > h4,
+  & #action_info {
+    @extend %clipIt;
+  }
+}
+#can_thank_you,
+#action_welcome_message {
+  color: $marqColor;
+  @extend %siteStandardP;
+  h1 {
+    @extend %siteStandardP
+  }
+}
+.can_thank_you-block {
+  label {
+    display: block;
+    @extend %formLabel;
+  }
+  input {
+    border-width: 1px;
+    border-color: $marqInputBorder;
+    // border-radius: 3px;
+    // box-shadow: 0 0 3px $marqInputBorder  inset;
+    box-sizing: border-box;
+    width:100%;
+    height:36px;
+    padding:14px 10px;
+    background:$marqInputBg;
+    color:$marqInput;
+    @extend %formInput
+  }
+  textarea {
+    box-sizing: border-box;
+    min-height: 60px;
+    width:100%;
+    padding:14px 10px;
+    background:$marqInputBg;
+    border-width: 1px;
+    border-color:  $marqInputBorder;
+    border-style: solid;
+    color:$marqInput;
+    @extend %formInput;
+  }
+}
+.can_thank_you-block {
+  margin-top: 15px;
+}
+.can_thank_you-block label.hundredtool {
+  display: flex;
+  align-items: center;
+}
+#embed_options {
+  display: none;
+}
