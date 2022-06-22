@@ -174,12 +174,10 @@
   @include supFlexC;
   align-items: center;
   justify-content: flex-start;
-  margin:24px 0;
   background: $supBg;
   &__hed,
   &__body {
     max-width: 642px;
-    // margin-top:16px;
   }
   &__grfx {
     order:-1;
