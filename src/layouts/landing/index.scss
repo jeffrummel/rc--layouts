@@ -171,10 +171,10 @@
   }
 }
 @mixin sup05 {
-  @include supFlexC;
   align-items: center;
   justify-content: flex-start;
   background: $supBg;
+  @include supFlexC;
   &__hed,
   &__body {
     max-width: 642px;
@@ -190,13 +190,11 @@
   }
   @media screen and (min-width:700px) {
     flex:0 0 428px;
-    // margin:36px 0;
     &__hed {
       margin-top: 36px;
     }
   }
   @media screen and (min-width:960px) {
-    // margin:64px 0;
     &__hed {
       margin-top: 64px;
     }
@@ -205,9 +203,9 @@
 @mixin sup06 {
   display: flex;
   flex-flow: column;
-  @include supGridR;
   grid-template: minmax(138px,234px) auto/1fr minmax(138px,570px) minmax(248px,760px) 1fr;
   background: $supBg;
+  @include supGridR;
   &__hed,
   &__body {
     flex:1 1 50%;
@@ -221,9 +219,9 @@
     align-items: stretch;
     &:before {
       content:'';
-      background:$supHedBg;
       grid-column: 1 / span 2;
       grid-row: 1 / span 2;
+      background: $supHedBg;
 
     }
     &__hed {
@@ -235,7 +233,6 @@
       grid-column: 3 / span 1;
       grid-row: 2 / span 1;
       align-self:start;
-      // max-width:420px;
     }
     &__grfx {
       grid-column: 3 / span 2;
@@ -269,7 +266,7 @@
     &:after {
       z-index: -1;
       content:'';
-      background:$supBg;
+      background: $supBg;
       grid-column: 3 / span 2;
       grid-row: 1 / span 2;
     }
@@ -311,7 +308,7 @@
   }
   @media screen and (min-width:700px) {
     grid-template: auto/1fr minmax(248px,877px) minmax(138px,420px) 1fr;
-      justify-items: start;
+    justify-items: start;
     &__hed {
       grid-column: 2 / span 1;
       grid-row: 1 / span 1;
@@ -323,7 +320,6 @@
       grid-column: 3 / span 1;
       grid-row: 1 / span 1;
       align-self:center;
-      // max-width:420px;
     }
     &__grfx {
       grid-column: 1 / span 2;
@@ -343,7 +339,6 @@
   &__grfx {
     grid-column: 1;
     grid-row: 1;
-    // z-index:0;
     @include centerImg;
   }
   @media screen and (min-width:700px) {
