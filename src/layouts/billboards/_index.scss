@@ -25,7 +25,7 @@
     }
     &__item {
       flex: 0 1 calc(50% - 36px);
-      margin:$gap ($gap * 1.5);
+      margin:--gap (--gap * 1.5);
     }
   }
 }
@@ -134,7 +134,7 @@
     }
     &__item {
       flex: 0 1 calc(33% - 36px);
-      margin:$gap ($gap * 1.5);
+      margin:--gap (--gap * 1.5);
     }
   }
 }

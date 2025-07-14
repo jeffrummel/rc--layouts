@@ -1,20 +1,20 @@
 @mixin supFlexC {
   display: flex;
   flex-flow: column nowrap;
-  // border:0 solid $supBorder;
+  // border:0 solid --c-supBorder;
   @media screen and (min-width:700px) {
   }
 }
 @mixin supFlexR {
   display: flex;
   flex-flow: column nowrap;
-  // border:0 solid $supBorder;
+  // border:0 solid --c-supBorder;
   @media screen and (min-width:700px) {
     flex-direction: row;
   }
 }
 @mixin supGridR {
-  // border:0 solid $supBorder;
+  // border:0 solid --c-supBorder;
   @media screen and (min-width:700px) {
     display: grid;
   }
@@ -94,7 +94,7 @@
   flex-flow:column;
   justify-content: flex-end;
   // min-height: 680px;
-  background: $supBg;
+  background: --c-supBg;
   @include supGridR;
   &__hed,
   &__body {
@@ -143,7 +143,7 @@
   display: flex;
   flex-flow:column nowrap;
   @include supGridR;
-  background: $supBg;
+  background: --c-supBg;
   &__grfx {
     order:-1;
     max-width: 532px;
@@ -173,7 +173,7 @@
 @mixin sup05 {
   align-items: center;
   justify-content: flex-start;
-  background: $supBg;
+  background: --c-supBg;
   @include supFlexC;
   &__hed,
   &__body {
@@ -204,7 +204,7 @@
   display: flex;
   flex-flow: column;
   grid-template: minmax(138px,234px) auto/1fr minmax(138px,570px) minmax(248px,760px) 1fr;
-  background: $supBg;
+  background: --c-supBg;
   @include supGridR;
   &__hed,
   &__body {
@@ -221,7 +221,7 @@
       content:'';
       grid-column: 1 / span 2;
       grid-row: 1 / span 2;
-      background: $supHedBg;
+      background: --c-supHedBg;
 
     }
     &__hed {
@@ -247,7 +247,7 @@
   flex-flow: column;
   @include supGridR;
   &__hed {
-    background:$supHedBg;
+    background:--c-supHedBg;
   }
   &__grfx {
     order:-1;
@@ -259,14 +259,14 @@
     align-self: stretch;
     &:before {
       content:'';
-      background:$supHedBg;
+      background:--c-supHedBg;
       grid-column: 1 / span 2;
       grid-row: 1 / span 1;
     }
     &:after {
       z-index: -1;
       content:'';
-      background: $supBg;
+      background: --c-supBg;
       grid-column: 3 / span 2;
       grid-row: 1 / span 2;
     }
@@ -293,7 +293,7 @@
   display: grid;
   grid: 1fr auto / auto;
   align-items: center;
-  background: $supBg;
+  background: --c-supBg;
   @include supGridR;
   &__hed,
   &__grfx {
@@ -333,7 +333,7 @@
   display: grid;
   grid: auto auto / auto;
   align-items: center;
-  background: $supBg;
+  background: --c-supBg;
   @include supGridR;
   &__hed,
   &__grfx {

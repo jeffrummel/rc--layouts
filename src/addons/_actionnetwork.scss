@@ -29,11 +29,11 @@
     min-height: 60px;
     width:100%;
     padding:14px 10px;
-    background:$marqInputBg;
+    background:--c-marqInputBg;
     border-width:1px 1px 1px 1px;
-    border-color: $marqInputBorder;
+    border-color: --c-marqInputBorder;
     border-style: solid;
-    color:$marqInput;
+    color:--c-marqInput;
     @extend %formInput;
   }
 
@@ -44,7 +44,7 @@
 }
 .clearfix {
   & h4 {
-    color: $marqColor;
+    color: --c-marqColor;
     @extend %siteH3;
     margin: 0 0 0 15px;
   }
@@ -92,11 +92,11 @@
 }
 #error_message {
   @extend %siteStandardP;
-  color: $marqColor;
+  color: --c-marqColor;
 }
 #mobile_opt_in_default {
   @extend %siteStandardP;
-  color: $marqColor;
+  color: --c-marqColor;
 }
 #form_col1,
 #new_answer ul {
@@ -122,7 +122,7 @@
     }
     &.custom_fields.js-custom_fields.mt20 {
       flex: 0 0 100%;
-      color: $marqColor;
+      color: --c-marqColor;
       p {
         @extend %siteSmallP;
       }
@@ -139,11 +139,11 @@
   }
   .control-group {
     flex: 0 0 100%;
-    color:$marqInput;
+    color:--c-marqInput;
     @extend %formInput;
     padding:2px 0 0;
     .donate & {
-      color: $marqColor;
+      color: --c-marqColor;
     }
   }
 }
@@ -154,7 +154,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 15px;
-    color: $marqColor;
+    color: --c-marqColor;
     @extend %siteH3;
   }
 }
@@ -178,7 +178,7 @@
   .action_status_status_bar-grow {
     display: block;
     height: 27px;
-    background: $action;
+    background: --c-action;
   }
 }
 .state_wrap {
@@ -195,26 +195,26 @@
   }
   &-input {
     border-width: 1px;
-    border-color: $marqInputBorder;
+    border-color: --c-marqInputBorder;
     box-sizing: border-box;
     width:100%;
     height:36px;
     padding:14px 10px;
-    background:$marqInputBg;
-    color:$marqInput;
+    background:--c-marqInputBg;
+    color:--c-marqInput;
     @extend %formInput;
   }
 }
 .can_selectInner {
   border-width: 1px;
-  border-color: $marqInputBorder;
+  border-color: --c-marqInputBorder;
   border-style: solid;
   box-sizing: border-box;
   width:100% !important;
   height:36px;
   padding:0 10px 0;
-  background:$marqInputBg;
-  color:$marqInput;
+  background:--c-marqInputBg;
+  color:--c-marqInput;
   @extend %formInput;  
 }
 #new_answer ul li {
@@ -235,13 +235,13 @@
     align-items: center;
     padding:15px 0 0;
     .marq & {
-      color:$marqInput;
+      color:--c-marqInput;
       label {
-        color: $marqLabel;
+        color: --c-marqLabel;
       }
     }
     .donate & {
-      color: $marqColor;
+      color: --c-marqColor;
     }
     li {
       list-style: none;
@@ -265,13 +265,13 @@
     align-items: center;
     padding:15px 0 0;
     .marq & {
-      color:$marqInput;
+      color:--c-marqInput;
       label {
-        color: $marqLabel;
+        color: --c-marqLabel;
       }
     }
     .donate & {
-      color: $marqColor;
+      color: --c-marqColor;
     }
     li {
       list-style: none;
@@ -296,7 +296,7 @@
 }
 #can_thank_you,
 #action_welcome_message {
-  color: $marqColor;
+  color: --c-marqColor;
   @extend %siteStandardP;
   h1 {
     @extend %siteStandardP
@@ -309,15 +309,15 @@
   }
   input {
     border-width: 1px;
-    border-color: $marqInputBorder;
+    border-color: --c-marqInputBorder;
     // border-radius: 3px;
-    // box-shadow: 0 0 3px $marqInputBorder  inset;
+    // box-shadow: 0 0 3px --c-marqInputBorder  inset;
     box-sizing: border-box;
     width:100%;
     height:36px;
     padding:14px 10px;
-    background:$marqInputBg;
-    color:$marqInput;
+    background:--c-marqInputBg;
+    color:--c-marqInput;
     @extend %formInput
   }
   textarea {
@@ -325,11 +325,11 @@
     min-height: 60px;
     width:100%;
     padding:14px 10px;
-    background:$marqInputBg;
+    background:--c-marqInputBg;
     border-width: 1px;
-    border-color:  $marqInputBorder;
+    border-color:  --c-marqInputBorder;
     border-style: solid;
-    color:$marqInput;
+    color:--c-marqInput;
     @extend %formInput;
   }
 }

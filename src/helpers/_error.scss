@@ -4,8 +4,8 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  background: $marqBgM;
-  color: $marqColor;
+  background: --c-marqBgM;
+  color: --c-marqColor;
   @media screen and (min-width: 700px) {
     grid-column: 2 /span 8;
   }
@@ -18,7 +18,7 @@
     }
   }
   &__dek {
-    margin-top: $gap;
+    margin-top: --gap;
     p {
       @extend %siteFeatureP;
     }

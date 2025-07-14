@@ -18,16 +18,16 @@
   &__nav {
   }
   @media screen and (max-width:700px) {
-    height:$logoMHeight;
+    height:--logo-MHeight;
   }
   @media screen and (min-width:700px) and (max-width:960px) {
-    height:$logoTHeight;
+    height:--logo-THeight;
   }
   @media screen and (min-width:960px) and (max-width:1100px) {
-    height:$logoNHeight;
+    height:--logo-NHeight;
   }
   @media screen and (min-width:1100px) {
-      height:$logoDHeight;
+      height:--logo-DHeight;
   }
 }
 @mixin logoLeft {
@@ -61,7 +61,7 @@
   overflow-x: hidden;
   .visible & {
     overflow: visible;
-    background: $hedBg;
+    background: --c-hedBg;
   }
   @media screen and (min-width:700px) {
     overflow-x:visible;
@@ -72,7 +72,7 @@
   overflow:hidden;
   .visible & {
     overflow: visible;
-    // background: $hedBg;
+    // background: --c-hedBg;
   }  
   @media screen and (min-width:700px) {
     height:auto;
@@ -197,7 +197,7 @@
   }
   @media screen and (min-width:700px) {
     &__logo {
-      max-width: $logoDHeight * 2;
+      max-width: --logo-DHeight * 2;
     }
     &__menu {
       display: flex;
@@ -230,11 +230,11 @@
   justify-content: flex-start;
   @include logoRight;
   &__menu {
-    flex:0 0 $gap * 4;
+    flex:0 0 --gap * 4;
     text-align:left;
   }
   &__nav {
-    flex:1 0 $gap * 3;
+    flex:1 0 --gap * 3;
     @include hiddenNav;
   }
 }
