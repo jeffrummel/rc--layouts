@@ -73,7 +73,7 @@
       left:0;
       right:0;
       bottom:0;
-      background: --c-hedBg;
+      background: $hedBg;
     }
   }
   @media screen and (max-width:700px) {  
@@ -135,7 +135,7 @@
   align-items: flex-end;
   &__primary {
     .visible & {
-      // background: --c-hedBg;
+      // background: $hedBg;
       display: flex;
       // justify-content: center;
       // align-items: center;
@@ -156,7 +156,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: --c-hedBg;
+        background: $hedBg;
       }
     }
     &__primary {
@@ -273,7 +273,7 @@
       flex-flow:column nowrap;
       justify-content: flex-start;
       align-items: flex-start;
-      background: --c-hedBg;
+      background: $hedBg;
     }
   }
   &__secondary {
@@ -292,7 +292,7 @@
         left:0;
         right:0;
         bottom:0;
-        background: --c-hedBg;
+        background: $hedBg;
       }
     }
     &__secondary {
@@ -352,7 +352,7 @@
   align-items: flex-end;
   &__primary {
     .visible & {
-      background: --c-hedBg;
+      background: $hedBg;
       display: flex;
       flex-flow:column nowrap;
       align-items: center;
@@ -433,7 +433,7 @@
   }
   &__primary {
     .visible & {
-      background: --c-hedBg;
+      background: $hedBg;
       display: flex;
       flex-flow:column nowrap;
       justify-content: flex-start;
@@ -500,7 +500,7 @@
   }
   &__primary {
     .visible & {
-      background: --c-hedBg;
+      background: $hedBg;
       display: flex;
       flex-flow:column nowrap;
       align-items: center;
@@ -572,7 +572,7 @@
   align-items: flex-start;
   &__primary {
     .visible & {
-      background: --c-hedBg;
+      background: $hedBg;
       display: flex;
       flex-flow:column nowrap;
       align-items: center;

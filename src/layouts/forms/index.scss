@@ -6,7 +6,7 @@
     &--label,
     label {
       display:block;
-      color:--c-marqLabel;
+      color:$marqLabel;
       @extend %formLabel;
     }
     &--input,
@@ -15,8 +15,8 @@
       width:100%;
       height:40px;
       padding:2px 14px 0;
-      background:--c-marqInputBg;
-      color:--c-marqInput;
+      background:$marqInputBg;
+      color:$marqInput;
       @extend %formInput;
     }
     &--txt,
@@ -24,8 +24,8 @@
       
       width:100%;
       padding:2px 14px 0;
-      background:--c-marqInputBg;
-      color:--c-marqInput;
+      background:$marqInputBg;
+      color:$marqInput;
       @extend %formInput;
 
     }
@@ -62,24 +62,24 @@
     @extend %standardCta;
   }
 }
-@mixin form01(--c-border: 0,--c-shadow: 6px) {
+@mixin form01($border: 0,$shadow: 6px) {
   &__set,
   .mc-field-group {
     &--input,
     &--txt,
     input {
-      border:--c-border solid --c-marqInputBorder;
+      border:$border solid $marqInputBorder;
       border-radius: 3px;
-      box-shadow: 0 0 --c-shadow --c-marqInputBorder  inset;
+      box-shadow: 0 0 $shadow $marqInputBorder  inset;
     }
   }
   &--action,
   input.button {
-    border:--c-border;
+    border:$border;
     border-radius: 3px;
   }
 }
-@mixin form02(--c-border: 1px, --c-shadow: 6px) {
+@mixin form02($border: 1px, $shadow: 6px) {
   &__set,
   .mc-field-group {
     &--input,
@@ -91,83 +91,83 @@
     &-fields input[type="url"],
     &-fields input[type="number"],
     input {
-      border-width: 0 0 --c-border --c-border;
+      border-width: 0 0 $border $border;
       border-style: solid;
       border-radius:0;
       .marq & {
-        border-color: transparent transparent --c-marqInputBorder --c-marqInputBorder;
-        box-shadow: --c-shadow 0 0 --c-marqInputBorder inset;  
+        border-color: transparent transparent $marqInputBorder $marqInputBorder;
+        box-shadow: $shadow 0 0 $marqInputBorder inset;  
       }
       .landing &,
       .embed & {
-        border-color: transparent transparent --c-defaultInputBorder --c-defaultInputBorder;
-        box-shadow: --c-shadow 0 0 --c-defaultInputBorder inset;  
+        border-color: transparent transparent $defaultInputBorder $defaultInputBorder;
+        box-shadow: $shadow 0 0 $defaultInputBorder inset;  
       }
     }
   }
   &--action,
   input.button {
     border:0;
-    box-shadow: --c-border 0 0 --c-ctaBorder  inset;
+    box-shadow: $border 0 0 $ctaBorder  inset;
   }
 }
-@mixin form03(--c-border: -4px,--c-shadow: 6px) {
+@mixin form03($border: -4px,$shadow: 6px) {
   &__set,
   .mc-field-group {
     &--input,
     &--txt,
     input {
       border:0;
-      box-shadow: 0 --c-border 0 --c-marqInputBorder inset;
+      box-shadow: 0 $border 0 $marqInputBorder inset;
     }
   }
   &--action,
   input.button {
     border:0;
-    box-shadow: 0 --c-border 0 --c-ctaBorder  inset;
+    box-shadow: 0 $border 0 $ctaBorder  inset;
   }
 }
-@mixin form04(--c-border: 1px) {
+@mixin form04($border: 1px) {
   &__set,
   .mc-field-group {
     &--input,
     &--txt,
     input {
-      border:--c-border solid --c-marqInputBorder;
+      border:$border solid $marqInputBorder;
     }
   }
   &--action,
   input.button {
-    border:--c-border solid --c-ctaBorder;
+    border:$border solid $ctaBorder;
   }
 }
-@mixin form05(--c-border: 1px) {
+@mixin form05($border: 1px) {
   &__set,
   .mc-field-group {
     &--txt,
     &--input {
-      border:--c-border solid --c-marqInputBorder;
+      border:$border solid $marqInputBorder;
       border-radius: 3px;
     }
   }
   &--action,
   input.button {
-    border:--c-border;
+    border:$border;
     // border-radius: 3px;
   }
 }
-@mixin form06(--c-border: 0) {
+@mixin form06($border: 0) {
   &__set,
   .mc-field-group {
     &--txt,
     &--input {
-      border:--c-border solid --c-marqInputBorder;
+      border:$border solid $marqInputBorder;
       border-radius: 20px;
     }
   }
   &--action,
   input.button {
-    border:--c-border;
+    border:$border;
     border-radius: 20px;
   }
 }

@@ -61,7 +61,7 @@
   overflow-x: hidden;
   .visible & {
     overflow: visible;
-    background: --c-hedBg;
+    background: $hedBg;
   }
   @media screen and (min-width:700px) {
     overflow-x:visible;
@@ -72,7 +72,7 @@
   overflow:hidden;
   .visible & {
     overflow: visible;
-    // background: --c-hedBg;
+    // background: $hedBg;
   }  
   @media screen and (min-width:700px) {
     height:auto;

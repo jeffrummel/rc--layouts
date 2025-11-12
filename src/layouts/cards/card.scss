@@ -146,7 +146,7 @@
   &--hed,
   &--dek {
     max-width:588px;
-    text-shadow: 0 0 4px --c-foreground;
+    text-shadow: 0 0 4px $foreground;
   }
   &--grfx {
     position: absolute;

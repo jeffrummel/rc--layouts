@@ -4,8 +4,8 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  background: --c-marqBgM;
-  color: --c-marqColor;
+  background: $marqBgM;
+  color: $marqColor;
   @media screen and (min-width: 700px) {
     grid-column: 2 /span 8;
   }

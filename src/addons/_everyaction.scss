@@ -8,29 +8,29 @@
   .site & select,
   .site & input:not([type="submit"]),
   .site & .select2-container--default .select2-selection--multiple {
-    border-width: --c-border;
+    border-width: $border;
     border-style: solid;
-    border-radius: --c-shadow;
+    border-radius: $shadow;
     .marq & {
-      background-color: --c-marqInputBg;
-      border-color:--c-marqInputBorder;
-      box-shadow: 0 --c-shadow 3px --c-marqInputShadow inset;
+      background-color: $marqInputBg;
+      border-color:$marqInputBorder;
+      box-shadow: 0 $shadow 3px $marqInputShadow inset;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
-      border-color: --c-defaultInputBorder;
-      box-shadow: 0 --c-shadow 3px --c-defaultInputShadow inset;
+      background-color: $defaultInputBg;
+      border-color: $defaultInputBorder;
+      box-shadow: 0 $shadow 3px $defaultInputShadow inset;
     }
   }
   input[type="radio"],
   input[type="checkbox"] + span::before {
     .marq & {
-      background-color: --c-marqInputBg;
+      background-color: $marqInputBg;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
+      background-color: $defaultInputBg;
     }
   }
 }
@@ -44,27 +44,27 @@
   .site & select,
   .site & input:not([type="submit"]),
   .site & .select2-container--default .select2-selection--multiple {
-    border-width: 0 0 --c-border --c-border;
+    border-width: 0 0 $border $border;
     border-style: solid;
     border-radius:0;
     .marq & {
-      border-color: transparent transparent --c-marqInputBorder --c-marqInputBorder;
-      box-shadow: --c-shadow 0 0 --c-marqInputBorder inset;  
+      border-color: transparent transparent $marqInputBorder $marqInputBorder;
+      box-shadow: $shadow 0 0 $marqInputBorder inset;  
     }
     .landing &,
     .embed & {
-      border-color: transparent transparent --c-defaultInputBorder --c-defaultInputBorder;
-      box-shadow: --c-shadow 0 0 --c-defaultInputBorder inset;  
+      border-color: transparent transparent $defaultInputBorder $defaultInputBorder;
+      box-shadow: $shadow 0 0 $defaultInputBorder inset;  
     }
   }
   input[type="radio"],
   input[type="checkbox"] + span::before {
     .marq & {
-      background-color: --c-marqInputBg;
+      background-color: $marqInputBg;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
+      background-color: $defaultInputBg;
     }
   }
 }
@@ -82,23 +82,23 @@
     border: 0;
     border-radius: 0;
     .marq & {
-      box-shadow: 0px --c-border 0px --c-marqInputBorder inset;
-      background-color: --c-marqInputBg;
+      box-shadow: 0px $border 0px $marqInputBorder inset;
+      background-color: $marqInputBg;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
-      box-shadow: 0px --c-border 0px --c-marqInputBorder inset;
+      background-color: $defaultInputBg;
+      box-shadow: 0px $border 0px $marqInputBorder inset;
     }
   }
   input[type="radio"],
   input[type="checkbox"] + span::before {
     .marq & {
-      background-color: --c-marqInputBg;
+      background-color: $marqInputBg;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
+      background-color: $defaultInputBg;
     }
   }
 }
@@ -112,27 +112,27 @@
   .site & select,
   .site & input:not([type="submit"]),
   .site & .select2-container--default .select2-selection--multiple {
-    border-width: --c-border;
+    border-width: $border;
     border-style: solid;
     border-radius: 0;
     .marq & {
-      background-color: --c-marqInputBg;
-      border-color:--c-marqInputBorder;
+      background-color: $marqInputBg;
+      border-color:$marqInputBorder;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
-      border-color: --c-defaultInputBorder;
+      background-color: $defaultInputBg;
+      border-color: $defaultInputBorder;
     }
   }
   input[type="radio"],
   input[type="checkbox"] + span::before {
     .marq & {
-      background-color: --c-marqInputBg;
+      background-color: $marqInputBg;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
+      background-color: $defaultInputBg;
     }
   }
 }
@@ -146,27 +146,27 @@
   .site & select,
   .site & input:not([type="submit"]),
   .site & .select2-container--default .select2-selection--multiple {
-    border-width: --c-border;
+    border-width: $border;
     border-style: solid;
-    border-radius: --c-shadow;
+    border-radius: $shadow;
     .marq & {
-      background-color: --c-marqInputBg;
-      border-color:--c-marqInputBorder;
+      background-color: $marqInputBg;
+      border-color:$marqInputBorder;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
-      border-color: --c-defaultInputBorder;
+      background-color: $defaultInputBg;
+      border-color: $defaultInputBorder;
     }
   }
   input[type="radio"],
   input[type="checkbox"] + span::before {
     .marq & {
-      background-color: --c-marqInputBg;
+      background-color: $marqInputBg;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
+      background-color: $defaultInputBg;
     }
   }
 }
@@ -180,27 +180,27 @@
   .site & select,
   .site & input:not([type="submit"]),
   .site & .select2-container--default .select2-selection--multiple {
-    border-width: --c-border;
+    border-width: $border;
     border-style: solid;
     border-radius: 20px;
     .marq & {
-      background-color: --c-marqInputBg;
-      border-color:--c-marqInputBorder;
+      background-color: $marqInputBg;
+      border-color:$marqInputBorder;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
-      border-color: --c-defaultInputBorder;
+      background-color: $defaultInputBg;
+      border-color: $defaultInputBorder;
     }
   }
   input[type="radio"],
   input[type="checkbox"] + span::before {
     .marq & {
-      background-color: --c-marqInputBg;
+      background-color: $marqInputBg;
     }
     .landing &,
     .embed & {
-      background-color: --c-defaultInputBg;
+      background-color: $defaultInputBg;
     }
   }
 }
@@ -212,7 +212,7 @@
     &-markup
     &-fieldset {
       margin-left: 0;
-      color: --c-marqLabel;
+      color: $marqLabel;
     }
   }
 }
@@ -230,18 +230,18 @@
       &-title,
       &-markup
       &-fieldset {
-        color: --c-defaultLabel;
+        color: $defaultLabel;
       }
       &-markup * {
-        color: --c-defaultLabel !important;
+        color: $defaultLabel !important;
       }
       &-inner {
-        background-color: --c-defaultFormBg;
-        color: --c-defaultLabel;
+        background-color: $defaultFormBg;
+        color: $defaultLabel;
       }
       &-inner > *,
       &-fieldset {
-        background-color: --c-defaultFormBg;
+        background-color: $defaultFormBg;
       }  
     }  
   }
@@ -253,21 +253,21 @@
       &-markup
       &-fieldset,
       &-label {
-        color: --c-marqLabel;
+        color: $marqLabel;
       }
       &-markup * {
-        color: --c-marqLabel !important;
+        color: $marqLabel !important;
       }
       &-inner {
-        background-color: --c-marqFormBg;
-        color: --c-marqLabel;
+        background-color: $marqFormBg;
+        color: $marqLabel;
       }
       &-inner > *,
       &-fieldset {
-        background-color: --c-marqFormBg;
+        background-color: $marqFormBg;
       }
       &-text input {
-        // box-shadow: 6px 0 0 --c-marqInputBorder inset;
+        // box-shadow: 6px 0 0 $marqInputBorder inset;
 
       }
     }
@@ -300,7 +300,7 @@
       margin-left:-10px;
       margin-right:-10px;
       label {
-        color: --c-defaultLabel;
+        color: $defaultLabel;
       }
     }
     &-title {

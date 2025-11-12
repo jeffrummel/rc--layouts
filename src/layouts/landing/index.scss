@@ -1,20 +1,20 @@
 @mixin supFlexC {
   display: flex;
   flex-flow: column nowrap;
-  // border:0 solid --c-supBorder;
+  // border:0 solid $supBorder;
   @media screen and (min-width:700px) {
   }
 }
 @mixin supFlexR {
   display: flex;
   flex-flow: column nowrap;
-  // border:0 solid --c-supBorder;
+  // border:0 solid $supBorder;
   @media screen and (min-width:700px) {
     flex-direction: row;
   }
 }
 @mixin supGridR {
-  // border:0 solid --c-supBorder;
+  // border:0 solid $supBorder;
   @media screen and (min-width:700px) {
     display: grid;
   }
@@ -94,7 +94,7 @@
   flex-flow:column;
   justify-content: flex-end;
   // min-height: 680px;
-  background: --c-supBg;
+  background: $supBg;
   @include supGridR;
   &__hed,
   &__body {
@@ -143,7 +143,7 @@
   display: flex;
   flex-flow:column nowrap;
   @include supGridR;
-  background: --c-supBg;
+  background: $supBg;
   &__grfx {
     order:-1;
     max-width: 532px;
@@ -208,7 +208,7 @@
   @include supGridR;
   grid-template: minmax(138px,234px) auto/1fr minmax(138px,570px) minmax(248px,760px) 1fr;
 <<<<<<< HEAD
-  background: --c-supBg;
+  background: $supBg;
   @include supGridR;
 =======
   background: $supBg;
@@ -230,7 +230,7 @@
       grid-column: 1 / span 2;
       grid-row: 1 / span 2;
 <<<<<<< HEAD
-      background: --c-supHedBg;
+      background: $supHedBg;
 =======
 >>>>>>> parent of 0bf5579 (updates sass order for dart-sass mixed declarations --https://sass-lang.com/documentation/breaking-changes/mixed-decls/)
 
@@ -259,7 +259,7 @@
   flex-flow: column;
   @include supGridR;
   &__hed {
-    background:--c-supHedBg;
+    background:$supHedBg;
   }
   &__grfx {
     order:-1;
@@ -271,7 +271,7 @@
     align-self: stretch;
     &:before {
       content:'';
-      background:--c-supHedBg;
+      background:$supHedBg;
       grid-column: 1 / span 2;
       grid-row: 1 / span 1;
     }
@@ -279,7 +279,7 @@
       z-index: -1;
       content:'';
 <<<<<<< HEAD
-      background: --c-supBg;
+      background: $supBg;
 =======
       background:$supBg;
 >>>>>>> parent of 0bf5579 (updates sass order for dart-sass mixed declarations --https://sass-lang.com/documentation/breaking-changes/mixed-decls/)
@@ -309,7 +309,7 @@
   display: grid;
   grid: 1fr auto / auto;
   align-items: center;
-  background: --c-supBg;
+  background: $supBg;
   @include supGridR;
   &__hed,
   &__grfx {
@@ -350,7 +350,7 @@
   display: grid;
   grid: auto auto / auto;
   align-items: center;
-  background: --c-supBg;
+  background: $supBg;
   @include supGridR;
   &__hed,
   &__grfx {
