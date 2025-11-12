@@ -39,7 +39,7 @@
     &__primary,
     &__secondary {
       .visible & {
-        padding-top:--logo-MHeight;
+        padding-top:$logoMHeight;
       }
     }
   }
@@ -69,7 +69,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       position:fixed;
-      padding-top:--logo-MHeight;
+      padding-top:$logoMHeight;
       left:0;
       right:0;
       bottom:0;
@@ -83,15 +83,15 @@
     &__secondary {
       &--donate {
         position: absolute;
-        right: --gap;
-        top: --gap;
+        right: $gap;
+        top: $gap;
       }
       .visible & {
         position: fixed;
         top: 0;
         right: 0;
         bottom:0;
-        padding-top: --logo-MHeight;
+        padding-top: $logoMHeight;
         z-index: 1;
       }
     }
@@ -115,7 +115,7 @@
     &__primary {
       .visible & {
         height: 100vh;
-        padding-top:--logo-THeight;
+        padding-top:$logoTHeight;
       }
     }
   }
@@ -125,7 +125,7 @@
         padding-left:42px;
       }
       .visible & {
-        padding-top:--logo-THeight;
+        padding-top:$logoTHeight;
       }
     }
   }
@@ -163,7 +163,7 @@
       .visible & {
         flex-flow:column nowrap;
         position:absolute;
-        top:--logo-MHeight;
+        top:$logoMHeight;
         left:0;
         right:0;
         bottom:0;
@@ -207,7 +207,7 @@
     &__primary {
       position: absolute;
       height:0;
-      top:--logo-THeight;
+      top:$logoTHeight;
       .visible & {
         height: calc(100vh - 112px);
       }
@@ -237,7 +237,7 @@
     top: 0;
     left:0;
     right: 0;
-    padding: --gap + --logo-MHeight --gap --gap --gap;
+    padding: $gap + $logoMHeight $gap $gap $gap;
     background:white;
   }
   &__secondary {
@@ -287,7 +287,7 @@
     &__primary {
       .visible & {
         position:fixed;
-        padding-top:--logo-MHeight;
+        padding-top:$logoMHeight;
         top:0;
         left:0;
         right:0;
@@ -370,7 +370,7 @@
     &__primary {
       .visible & {
         position:absolute;
-        top:--logo-MHeight;
+        top:$logoMHeight;
         left:0;
         right:0;
         bottom:0;
@@ -407,7 +407,7 @@
     }
   @media screen and (min-width:700px) and (max-width:960px) {
     &__primary {
-      top:--logo-THeight;
+      top:$logoTHeight;
       .visible & {
         height: 100vh;
       }
@@ -415,7 +415,7 @@
   }
   @media screen and (min-width:960px) {
     &__primary {
-      top:--logo-NHeight;
+      top:$logoNHeight;
       .visible & {
         height: 100vh;
       }
@@ -445,7 +445,7 @@
       overflow: hidden;
       .visible & {
         position:absolute;
-        top:--logo-MHeight * 2;
+        top:$logoMHeight * 2;
         left:0;
         right:0;
         bottom:0;
@@ -473,20 +473,20 @@
     }
   @media screen and (min-width:700px) and (max-width:960px) {
     &__primary {
-      top:--logo-THeight;
+      top:$logoTHeight;
       .visible & {
-        height: calc(100vh - --logo-THeight);
+        height: calc(100vh - $logoTHeight);
       }
     }
   }
   @media screen and (min-width:960px) {
     &__secondary {
-      // height: --gap * 4.5;
+      // height: $gap * 4.5;
     }
     &__primary {
-      top: --gap * 4.5;
+      top: $gap * 4.5;
       .visible & {
-        height: calc(100vh - #{--logo-DHeight} );
+        height: calc(100vh - #{$logoDHeight} );
       }
     }
   }
@@ -514,7 +514,7 @@
     &__primary {
       .visible & {
         position:absolute;
-        top:--logo-MHeight;
+        top:$logoMHeight;
         left:0;
         right:0;
         bottom:0;
@@ -551,7 +551,7 @@
     }
   @media screen and (min-width:700px) and (max-width:960px) {
     &__primary {
-      top:--logo-THeight;
+      top:$logoTHeight;
       .visible & {
         height: calc(100vh - 112px);
       }
@@ -559,7 +559,7 @@
   }
   @media screen and (min-width:960px) {
     &__primary {
-      top:--logo-NHeight;
+      top:$logoNHeight;
       .visible & {
         height: calc(100vh - 118px);
       }
@@ -586,7 +586,7 @@
     &__primary {
       .visible & {
         position:absolute;
-        top:--logo-MHeight;
+        top:$logoMHeight;
         left:0;
         right:0;
         bottom:0;
@@ -623,7 +623,7 @@
     }
   @media screen and (min-width:700px) and (max-width:960px) {
     &__primary {
-      top:--logo-THeight;
+      top:$logoTHeight;
       .visible & {
         height: calc(100vh - 112px);
       }
@@ -631,7 +631,7 @@
   }
   @media screen and (min-width:960px) {
     &__primary {
-      top:--logo-NHeight;
+      top:$logoNHeight;
       .visible & {
         height: calc(100vh - 118px);
       }

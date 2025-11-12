@@ -6,10 +6,10 @@
   @media screen and (min-width:700px) {
     -ms-grid-columns: 8% 8% 40% 8% 8%;
     grid-template-columns: repeat(2, minmax(24px,78px)) minmax(338px,728px) repeat(2, minmax(24px,78px));
-    gap:(--gap * 1.5);
+    gap:($gap * 1.5);
   }
   @media screen and (min-width:960px) {
-    gap:(--gap * 3);
+    gap:($gap * 3);
   }
   &__hed {
     -ms-grid-row: 1;

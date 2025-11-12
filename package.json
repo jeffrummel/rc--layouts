@@ -1,6 +1,6 @@
 {
   "name": "@jeffrummel/rc-layouts",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "SCSS Layouts for Rising Campaign Platform Sites",
   "main": "index.js",
   "repository": "git@github.com:jeffrummel/rc--layouts.git",

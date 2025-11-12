@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   flex-flow: column;
-  gap: (--gap * 2);
-  padding: --gap;
+  gap: ($gap * 2);
+  padding: $gap;
   @media screen and (min-width: 760px) {
     display: grid;
     grid-template: auto 1fr / 2fr 3fr;
@@ -121,7 +121,7 @@
   position: relative;
   display: flex;
   flex-flow: column;
-  gap: (--gap * 2);
+  gap: ($gap * 2);
   @media screen and (min-width: 760px) {
     display: grid;
     grid-template: auto 1fr / 2fr 3fr;
