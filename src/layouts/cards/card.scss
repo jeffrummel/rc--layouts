@@ -157,8 +157,8 @@
     z-index: -1;
     width:100%;
     min-height:352px;
-    justify-content: center;
     @include centerImg;
+    justify-content: center;
   }
 }
 @mixin card07 {

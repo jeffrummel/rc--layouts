@@ -31,21 +31,21 @@
   }
 }
 @mixin logoLeft {
+  @include baseHed;
   flex-flow:row wrap;
   align-items: stretch;
-  @include baseHed;
 }
 @mixin logoCenter {
+  @include baseHed;
   flex-flow:row wrap;
   justify-content:space-between;
   align-items: stretch;
-  @include baseHed;
 }
 @mixin logoRight {
+  @include baseHed;
   flex-flow:row-reverse wrap;
   justify-content:space-between;
   align-items: stretch;
-  @include baseHed;
 }
 @mixin logoCol {
   @include baseHed;
@@ -79,8 +79,8 @@
   }
 }
 @mixin hed01 {
-  justify-content:space-between;
   @include logoLeft;
+  justify-content:space-between;
   &__menu {
     flex:0 1 auto;
   }
@@ -101,8 +101,8 @@
   }
 }
 @mixin hed02 {
-  flex-wrap: nowrap;
   @include logoCenter;
+  flex-wrap: nowrap;
   &__menu {
     order:-1;
     flex:0 0 40px;
@@ -116,6 +116,7 @@
 }
 @mixin hed03 {
   @include logoLeft;
+  // align-items: center;
   &__menu {
     flex:0 1 auto;
   }
@@ -159,9 +160,9 @@
   }
 }
 @mixin hed05 {
+  @include logoLeft;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  @include logoLeft;
   &__menu {
     flex:1 0 auto;
     text-align:left;
@@ -172,8 +173,8 @@
   }
 }
 @mixin hed06 {
-  flex-wrap: nowrap;
   @include logoLeft;
+  flex-wrap: nowrap;
   &__menu {
     order: 1;
     flex:0 0 40px;
@@ -185,8 +186,8 @@
   }
 }
 @mixin hed07 {
-  justify-content:space-between;
   @include logoCol;
+  justify-content:space-between;
   &__menu {
     flex:0 1 auto;
   }
@@ -200,6 +201,7 @@
       max-width: --logo-DHeight * 2;
     }
     &__menu {
+      // display:none;
       display: flex;
       justify-content: flex-end;
     }
@@ -211,8 +213,8 @@
   }
 }
 @mixin hed08 {
-  flex-wrap: nowrap;
   @include logoCenter;
+  flex-wrap: nowrap;
   &__menu {
     flex:1 0 40px;
     text-align:left;
@@ -226,9 +228,9 @@
   }
 }
 @mixin hed09 {
+  @include logoRight;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  @include logoRight;
   &__menu {
     flex:0 0 --gap * 4;
     text-align:left;
