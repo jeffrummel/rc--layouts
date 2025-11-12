@@ -224,10 +224,7 @@
       background:$supHedBg;
       grid-column: 1 / span 2;
       grid-row: 1 / span 2;
-<<<<<<< HEAD
       background: $supHedBg;
-=======
->>>>>>> parent of 0bf5579 (updates sass order for dart-sass mixed declarations --https://sass-lang.com/documentation/breaking-changes/mixed-decls/)
 
     }
     &__hed {
@@ -273,11 +270,7 @@
     &:after {
       z-index: -1;
       content:'';
-<<<<<<< HEAD
       background: $supBg;
-=======
-      background:$supBg;
->>>>>>> parent of 0bf5579 (updates sass order for dart-sass mixed declarations --https://sass-lang.com/documentation/breaking-changes/mixed-decls/)
       grid-column: 3 / span 2;
       grid-row: 1 / span 2;
     }
