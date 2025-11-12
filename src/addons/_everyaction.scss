@@ -341,9 +341,9 @@
       padding: 0 !important;
     }
     .btn-at-primary {
+      margin:0;
       @include cta;
       @extend %siteH5;
-      margin:0;
     }
   }
 }
