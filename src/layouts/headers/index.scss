@@ -31,21 +31,21 @@
   }
 }
 @mixin logoLeft {
-  @include baseHed;
   flex-flow:row wrap;
   align-items: stretch;
+  @include baseHed;
 }
 @mixin logoCenter {
-  @include baseHed;
   flex-flow:row wrap;
   justify-content:space-between;
   align-items: stretch;
+  @include baseHed;
 }
 @mixin logoRight {
-  @include baseHed;
   flex-flow:row-reverse wrap;
   justify-content:space-between;
   align-items: stretch;
+  @include baseHed;
 }
 @mixin logoCol {
   @include baseHed;
@@ -79,8 +79,8 @@
   }
 }
 @mixin hed01 {
-  @include logoLeft;
   justify-content:space-between;
+  @include logoLeft;
   &__menu {
     flex:0 1 auto;
   }
@@ -101,8 +101,8 @@
   }
 }
 @mixin hed02 {
-  @include logoCenter;
   flex-wrap: nowrap;
+  @include logoCenter;
   &__menu {
     order:-1;
     flex:0 0 40px;
@@ -116,7 +116,6 @@
 }
 @mixin hed03 {
   @include logoLeft;
-  // align-items: center;
   &__menu {
     flex:0 1 auto;
   }
@@ -173,8 +172,8 @@
   }
 }
 @mixin hed06 {
-  @include logoLeft;
   flex-wrap: nowrap;
+  @include logoLeft;
   &__menu {
     order: 1;
     flex:0 0 40px;
@@ -186,8 +185,8 @@
   }
 }
 @mixin hed07 {
-  @include logoCol;
   justify-content:space-between;
+  @include logoCol;
   &__menu {
     flex:0 1 auto;
   }
@@ -213,8 +212,8 @@
   }
 }
 @mixin hed08 {
-  @include logoCenter;
   flex-wrap: nowrap;
+  @include logoCenter;
   &__menu {
     flex:1 0 40px;
     text-align:left;
@@ -228,9 +227,9 @@
   }
 }
 @mixin hed09 {
-  @include logoRight;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  @include logoRight;
   &__menu {
     flex:0 0 --gap * 4;
     text-align:left;
